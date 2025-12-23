@@ -1,0 +1,42 @@
+# Commandes pour lancer l'application de gestion d'association
+
+1. Assurez-vous d'avoir Python 3.x installé sur votre machine.
+   ➤ Vérifiez avec la commande :
+   python --version
+
+2. Pour lancer l'application :
+   ➤ python main.py
+   (ou le nom du fichier principal de votre projet)
+
+##Importer la base de données
+
+# 1. Se connecter à MySQL
+
+# 2. Suivre les étapes suivantes:
+server->data import->Import from self-contained file->Browse->Default target schema(choisir schema)->Import progress->Start import->Finish->Refresh all
+# 3. Quitter MySQL
+exit;
+
+
+###Commandes pour lancer le projet Django
+
+# 1. Installer Django (si non installé)
+pip install Django
+# 2. Aller dans le dossier du projet
+cd mon_association
+
+# 3. Installer pillow
+python -m pip install pillow
+
+# 5. Appliquer les migrations
+python manage.py makemigrations
+python manage.py migrate
+
+# 6. Lancer le serveur
+python manage.py runserver
+
+# 7. Accéder à l’application dans un navigateur :
+http://127.0.0.1:8000/
+
+###Comment
+Supprimer les tables qui signalent les erreurs car ce sont les tables créées automatiquement par Django
